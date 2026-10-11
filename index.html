@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0d">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kárákátà">
+  <title>Kárákátà — Watches</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <a class="wordmark" href="#" data-page="home">Kárákátà</a>
+      <div class="top-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="icon-btn" id="installBtn" aria-label="Install app" title="Install app" hidden>↓</button>
+        <button class="icon-btn" data-page="cart" aria-label="Cart">🛒<span class="count" id="cartCount">0</span></button>
+      </div>
+    </header>
+
+    <aside id="drawer" class="drawer">
+      <div class="drawer-head"><strong>Kárákátà</strong><button id="closeMenu" class="icon-btn">×</button></div>
+      <button data-page="home">⌂　 Discover watches</button>
+      <button data-page="cart">🛒　 Your Cart</button>
+      <button data-page="wishlist">♡　 Favourites</button>
+      <button data-page="profile">♙　 Profile</button>
+      <button data-page="login">⇥　 Login</button>
+      <button data-page="register">＋　 Create new account</button>
+    </aside>
+    <div id="scrim"></div>
+
+    <main id="main"></main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button data-page="home"><span>⌂</span>Home</button>
+      <button data-page="wishlist"><span>♡</span>Wishlist</button>
+      <button data-page="cart"><span>🛒</span>Cart</button>
+      <button data-page="profile"><span>♙</span>Profile</button>
+    </nav>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </div>
+  <script src="app.js"></script>
+  <script src="pwa.js"></script>
+</body>
+</html>
